@@ -10,4 +10,7 @@ describe("Test add function", () => {
   it("should return the sum of 2 numbers", () => {
     expect(add("1,2")).toEqual(3);
   });
+  it("should return sum of unknown amount of numbers", () => {
+    expect(add("1,2,3,4,5,6")).toEqual(21);
+  });
 });
