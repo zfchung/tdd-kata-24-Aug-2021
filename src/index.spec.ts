@@ -13,4 +13,7 @@ describe("Test add function", () => {
   it("should return sum of unknown amount of numbers", () => {
     expect(add("1,2,3,4,5,6")).toEqual(21);
   });
+  it("should allow '\n' and ',' as delimiters", () => {
+    expect(add("1\n2,3")).toEqual(6);
+  });
 });
