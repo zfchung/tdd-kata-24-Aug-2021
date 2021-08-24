@@ -1,3 +1,5 @@
+// 31 mins
+
 export function add(input: string): number {
   const value = input ? input : "0";
   const isCustomDelimiter = value.startsWith("//");
