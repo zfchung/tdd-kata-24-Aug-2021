@@ -16,4 +16,7 @@ describe("Test add function", () => {
   it("should allow '\n' and ',' as delimiters", () => {
     expect(add("1\n2,3")).toEqual(6);
   });
+  it("should allow custom delimiters", () => {
+    expect(add("//;\n1;2;3")).toEqual(6);
+  });
 });
