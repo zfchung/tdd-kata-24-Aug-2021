@@ -1,3 +1,4 @@
 export function add(input: string): number {
-  return 0;
+  const value = input ? input : "0";
+  return parseInt(value);
 }
