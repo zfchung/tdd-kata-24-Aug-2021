@@ -19,4 +19,9 @@ describe("Test add function", () => {
   it("should allow custom delimiters", () => {
     expect(add("//;\n1;2;3")).toEqual(6);
   });
+  it("should throw exception when there is negative number", () => {
+    expect(() => add("1,2,-3")).toThrow("Negative not allowed: -3");
+    expect(() => add("-1\n-2,-3")).toThrow("Negative not allowed: -1,-2,-3");
+    expect(() => add("//;\n-1;2;-3")).toThrow("Negative not allowed: -1,-3");
+  });
 });
